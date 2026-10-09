@@ -1,0 +1,165 @@
+{
+  "id": "electric_lime",
+  "name": "ليموني رياضي نيون 🔋",
+  "description": "طاقة كهربائية متوهجة باللون الليموني والأسود الكربوني للملابس والمعدات الرياضية والمكملات.",
+  "category": "رياضة ولياقة",
+  "preview": {
+    "primary": "#65A30D",
+    "accent": "#84CC16",
+    "background": "#F7FEE7"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "electric_lime",
+    "default_theme_mode": "dark",
+    "light_theme": {
+      "colors": {
+        "primary": "#65A30D",
+        "primary_hover": "#4D7C0F",
+        "primary_gradient_start": "#65A30D",
+        "primary_gradient_end": "#84CC16",
+        "accent": "#84CC16",
+        "bg_body": "#F7FEE7",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#ECFCCB",
+        "text_main": "#1A2E05",
+        "text_muted": "#365314",
+        "border": "#D9F99D",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#1A2E05",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#65A30D",
+        "bottom_bar_inactive": "#365314",
+        "card_bg": "#FFFFFF",
+        "card_border": "#D9F99D",
+        "card_title": "#1A2E05",
+        "price_color": "#65A30D",
+        "old_price_color": "#365314",
+        "badge_bg": "#DC2626",
+        "badge_text": "#FFFFFF",
+        "section_title": "#1A2E05",
+        "category_chip_bg": "#ECFCCB",
+        "category_chip_active": "#65A30D",
+        "category_chip_text": "#1A2E05",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(26, 46, 5, 0.6)",
+        "modal_handle": "#D9F99D",
+        "btn_primary_bg": "#65A30D",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#65A30D"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#A3E635",
+        "primary_hover": "#BEF264",
+        "primary_gradient_start": "#A3E635",
+        "primary_gradient_end": "#22C55E",
+        "accent": "#22C55E",
+        "bg_body": "#071302",
+        "bg_card": "#112606",
+        "bg_surface": "#1B390B",
+        "text_main": "#F7FEE7",
+        "text_muted": "#D9F99D",
+        "border": "#365314",
+        "navbar_bg": "#112606",
+        "navbar_text": "#F7FEE7",
+        "bottom_bar_bg": "#112606",
+        "bottom_bar_active": "#A3E635",
+        "bottom_bar_inactive": "#D9F99D",
+        "card_bg": "#112606",
+        "card_border": "#365314",
+        "card_title": "#F7FEE7",
+        "price_color": "#A3E635",
+        "old_price_color": "#D9F99D",
+        "badge_bg": "#EF4444",
+        "badge_text": "#FFFFFF",
+        "section_title": "#F7FEE7",
+        "category_chip_bg": "#1B390B",
+        "category_chip_active": "#A3E635",
+        "category_chip_text": "#F7FEE7",
+        "modal_bg": "#112606",
+        "modal_overlay": "rgba(0, 0, 0, 0.9)",
+        "modal_handle": "#365314",
+        "btn_primary_bg": "#A3E635",
+        "btn_primary_text": "#071302",
+        "chatbot_btn_bg": "#A3E635"
+      }
+    },
+    "typography": {
+      "font_family": "Changa",
+      "base_size": "16px",
+      "heading_weight": "800",
+      "heading_size_mobile": "1.2rem",
+      "heading_size_desktop": "1.5rem",
+      "price_size_mobile": "1.15rem",
+      "price_size_desktop": "1.3rem"
+    },
+    "shapes": {
+      "card_radius": "12px",
+      "button_radius": "6px",
+      "button_style": "square",
+      "card_style": "bordered",
+      "navbar_style": "neon",
+      "section_spacing": "compact"
+    },
+    "animations": {
+      "card_hover": "glow"
+    },
+    "products_settings": {
+      "display_mode": "by_categories_sections",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": true,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "bold"
+      },
+      "landscape": {
+        "grid_columns": 4,
+        "card_orientation": "landscape",
+        "card_style": "bold"
+      },
+      "add_to_cart_btn": {
+        "style": "rounded_box",
+        "action_animation": "scale"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "neon",
+        "items": [
+          { "id": "home", "label": "الرئيسية", "icon": "fa-home", "visible": true, "order": 1 },
+          { "id": "search", "label": "بحث", "icon": "fa-search", "visible": true, "order": 2 },
+          { "id": "orders", "label": "طلباتي", "icon": "fa-box-open", "visible": true, "order": 3 },
+          { "id": "favorites", "label": "المفضلة", "icon": "fa-heart", "visible": true, "order": 4 },
+          { "id": "cart", "label": "السلة", "icon": "fa-shopping-cart", "visible": true, "order": 5 }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-bolt",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "neon"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "مدرب اللياقة",
+      "persona": "tech",
+      "button_style": "minimal",
+      "avatar_style": "orb",
+      "accent_color": "#A3E635"
+    }
+  }
+}

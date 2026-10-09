@@ -1,0 +1,165 @@
+{
+  "id": "cyber_cyan",
+  "name": "سماوي سايبر نيون ⚡",
+  "description": "طابع مستقبلي وتكنولوجي حاد بزوايا مربعة وتأثيرات نيون مشعة للألعاب والإلكترونيات.",
+  "category": "ألعاب وتقنية",
+  "preview": {
+    "primary": "#0891B2",
+    "accent": "#06B6D4",
+    "background": "#ECFEFF"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "cyber_cyan",
+    "default_theme_mode": "dark",
+    "light_theme": {
+      "colors": {
+        "primary": "#0891B2",
+        "primary_hover": "#0E7490",
+        "primary_gradient_start": "#0891B2",
+        "primary_gradient_end": "#06B6D4",
+        "accent": "#06B6D4",
+        "bg_body": "#ECFEFF",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#CFFAFE",
+        "text_main": "#164E63",
+        "text_muted": "#0891B2",
+        "border": "#A5F3FC",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#164E63",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#0891B2",
+        "bottom_bar_inactive": "#0891B2",
+        "card_bg": "#FFFFFF",
+        "card_border": "#A5F3FC",
+        "card_title": "#164E63",
+        "price_color": "#0891B2",
+        "old_price_color": "#0891B2",
+        "badge_bg": "#F43F5E",
+        "badge_text": "#FFFFFF",
+        "section_title": "#164E63",
+        "category_chip_bg": "#CFFAFE",
+        "category_chip_active": "#0891B2",
+        "category_chip_text": "#164E63",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(22, 78, 99, 0.6)",
+        "modal_handle": "#A5F3FC",
+        "btn_primary_bg": "#0891B2",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#0891B2"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#22D3EE",
+        "primary_hover": "#67E8F9",
+        "primary_gradient_start": "#22D3EE",
+        "primary_gradient_end": "#A855F7",
+        "accent": "#A855F7",
+        "bg_body": "#08131F",
+        "bg_card": "#0E2338",
+        "bg_surface": "#153350",
+        "text_main": "#ECFEFF",
+        "text_muted": "#A5F3FC",
+        "border": "#155E75",
+        "navbar_bg": "#0E2338",
+        "navbar_text": "#ECFEFF",
+        "bottom_bar_bg": "#0E2338",
+        "bottom_bar_active": "#22D3EE",
+        "bottom_bar_inactive": "#A5F3FC",
+        "card_bg": "#0E2338",
+        "card_border": "#155E75",
+        "card_title": "#ECFEFF",
+        "price_color": "#22D3EE",
+        "old_price_color": "#A5F3FC",
+        "badge_bg": "#F43F5E",
+        "badge_text": "#FFFFFF",
+        "section_title": "#ECFEFF",
+        "category_chip_bg": "#153350",
+        "category_chip_active": "#22D3EE",
+        "category_chip_text": "#ECFEFF",
+        "modal_bg": "#0E2338",
+        "modal_overlay": "rgba(0, 0, 0, 0.9)",
+        "modal_handle": "#155E75",
+        "btn_primary_bg": "#22D3EE",
+        "btn_primary_text": "#08131F",
+        "chatbot_btn_bg": "#22D3EE"
+      }
+    },
+    "typography": {
+      "font_family": "Cairo",
+      "base_size": "16px",
+      "heading_weight": "900",
+      "heading_size_mobile": "1.2rem",
+      "heading_size_desktop": "1.5rem",
+      "price_size_mobile": "1.15rem",
+      "price_size_desktop": "1.3rem"
+    },
+    "shapes": {
+      "card_radius": "6px",
+      "button_radius": "4px",
+      "button_style": "square",
+      "card_style": "bordered",
+      "navbar_style": "neon",
+      "section_spacing": "compact"
+    },
+    "animations": {
+      "card_hover": "glow"
+    },
+    "products_settings": {
+      "display_mode": "tabs_by_category",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": true,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "bold"
+      },
+      "landscape": {
+        "grid_columns": 4,
+        "card_orientation": "landscape",
+        "card_style": "bold"
+      },
+      "add_to_cart_btn": {
+        "style": "rounded_box",
+        "action_animation": "glow"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "neon",
+        "items": [
+          { "id": "home", "label": "الرئيسية", "icon": "fa-home", "visible": true, "order": 1 },
+          { "id": "search", "label": "بحث", "icon": "fa-search", "visible": true, "order": 2 },
+          { "id": "orders", "label": "طلباتي", "icon": "fa-box-open", "visible": true, "order": 3 },
+          { "id": "favorites", "label": "المفضلة", "icon": "fa-heart", "visible": true, "order": 4 },
+          { "id": "cart", "label": "السلة", "icon": "fa-shopping-cart", "visible": true, "order": 5 }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-gamepad",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "neon"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "Cyber Bot",
+      "persona": "tech",
+      "button_style": "minimal",
+      "avatar_style": "orb",
+      "accent_color": "#22D3EE"
+    }
+  }
+}

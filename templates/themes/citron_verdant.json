@@ -1,0 +1,195 @@
+{
+  "id": "citron_verdant",
+  "name": "ليمون أخضر راقٍ",
+  "description": "ليموني أخضر متوازن مع درجات غابية داكنة.",
+  "category": "حيوية وطبيعة",
+  "preview": {
+    "primary": "#3F7D20",
+    "accent": "#65A30D",
+    "background": "#F7FBF2"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "citron_verdant",
+    "default_theme_mode": "light",
+    "light_theme": {
+      "colors": {
+        "primary": "#3F7D20",
+        "primary_hover": "#315F19",
+        "primary_gradient_start": "#3F7D20",
+        "primary_gradient_end": "#A3D977",
+        "accent": "#65A30D",
+        "bg_body": "#F7FBF2",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#E7F2D8",
+        "text_main": "#1B2E11",
+        "text_muted": "#3F6212",
+        "border": "#CDE3B2",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#1B2E11",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#3F7D20",
+        "bottom_bar_inactive": "#3F6212",
+        "card_bg": "#FFFFFF",
+        "card_border": "#CDE3B2",
+        "card_title": "#1B2E11",
+        "price_color": "#3F7D20",
+        "old_price_color": "#3F6212",
+        "badge_bg": "#E11D48",
+        "badge_text": "#FFFFFF",
+        "section_title": "#1B2E11",
+        "category_chip_bg": "#E7F2D8",
+        "category_chip_active": "#3F7D20",
+        "category_chip_text": "#1B2E11",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(27, 46, 17, 0.6)",
+        "modal_handle": "#CDE3B2",
+        "btn_primary_bg": "#3F7D20",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#3F7D20"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#A3D977",
+        "primary_hover": "#C1E6A1",
+        "primary_gradient_start": "#A3D977",
+        "primary_gradient_end": "#65A30D",
+        "accent": "#BEF264",
+        "bg_body": "#10170B",
+        "bg_card": "#202C15",
+        "bg_surface": "#30401E",
+        "text_main": "#F7FEE7",
+        "text_muted": "#D9F99D",
+        "border": "#4D7C0F",
+        "navbar_bg": "#202C15",
+        "navbar_text": "#F7FEE7",
+        "bottom_bar_bg": "#202C15",
+        "bottom_bar_active": "#A3D977",
+        "bottom_bar_inactive": "#D9F99D",
+        "card_bg": "#202C15",
+        "card_border": "#4D7C0F",
+        "card_title": "#F7FEE7",
+        "price_color": "#A3D977",
+        "old_price_color": "#D9F99D",
+        "badge_bg": "#F43F5E",
+        "badge_text": "#FFFFFF",
+        "section_title": "#F7FEE7",
+        "category_chip_bg": "#30401E",
+        "category_chip_active": "#A3D977",
+        "category_chip_text": "#F7FEE7",
+        "modal_bg": "#202C15",
+        "modal_overlay": "rgba(0, 0, 0, 0.85)",
+        "modal_handle": "#4D7C0F",
+        "btn_primary_bg": "#A3D977",
+        "btn_primary_text": "#10170B",
+        "chatbot_btn_bg": "#A3D977"
+      }
+    },
+    "typography": {
+      "font_family": "Cairo",
+      "base_size": "16px",
+      "heading_weight": "800",
+      "heading_size_mobile": "1.2rem",
+      "heading_size_desktop": "1.5rem",
+      "price_size_mobile": "1.15rem",
+      "price_size_desktop": "1.3rem"
+    },
+    "shapes": {
+      "card_radius": "24px",
+      "button_radius": "14px",
+      "button_style": "rounded",
+      "card_style": "magazine",
+      "navbar_style": "floating",
+      "section_spacing": "relaxed"
+    },
+    "animations": {
+      "card_hover": "scale"
+    },
+    "products_settings": {
+      "display_mode": "featured_first",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": true,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "magazine"
+      },
+      "landscape": {
+        "grid_columns": 3,
+        "card_orientation": "landscape",
+        "card_style": "magazine"
+      },
+      "add_to_cart_btn": {
+        "style": "rounded_box",
+        "action_animation": "scale"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "floating",
+        "items": [
+          {
+            "id": "home",
+            "label": "الرئيسية",
+            "icon": "fa-home",
+            "visible": true,
+            "order": 1
+          },
+          {
+            "id": "search",
+            "label": "بحث",
+            "icon": "fa-search",
+            "visible": true,
+            "order": 2
+          },
+          {
+            "id": "orders",
+            "label": "طلباتي",
+            "icon": "fa-box-open",
+            "visible": true,
+            "order": 3
+          },
+          {
+            "id": "favorites",
+            "label": "المفضلة",
+            "icon": "fa-heart",
+            "visible": true,
+            "order": 4
+          },
+          {
+            "id": "cart",
+            "label": "السلة",
+            "icon": "fa-shopping-cart",
+            "visible": true,
+            "order": 5
+          }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-crown",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "floating"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "مستشار الفخامة",
+      "persona": "luxury",
+      "button_style": "bubble",
+      "avatar_style": "halo",
+      "accent_color": "#3F7D20"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "indigo",
+  "name": "إنديغو عصري ناعم 💎",
+  "description": "الهوية العصرية الناعمة بتدرجات إنديغو وتركواز مع كروت زجاجية وأزرار كبسولية.",
+  "category": "تقنية وعصري",
+  "preview": {
+    "primary": "#4F46E5",
+    "accent": "#06B6D4",
+    "background": "#F8FAFC"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "indigo",
+    "default_theme_mode": "light",
+    "light_theme": {
+      "colors": {
+        "primary": "#4F46E5",
+        "primary_hover": "#4338CA",
+        "primary_gradient_start": "#4F46E5",
+        "primary_gradient_end": "#06B6D4",
+        "accent": "#06B6D4",
+        "bg_body": "#F8FAFC",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#F1F5F9",
+        "text_main": "#0F172A",
+        "text_muted": "#64748B",
+        "border": "#E2E8F0",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#0F172A",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#4F46E5",
+        "bottom_bar_inactive": "#94A3B8",
+        "card_bg": "#FFFFFF",
+        "card_border": "#E2E8F0",
+        "card_title": "#0F172A",
+        "price_color": "#4F46E5",
+        "old_price_color": "#94A3B8",
+        "badge_bg": "#EF4444",
+        "badge_text": "#FFFFFF",
+        "section_title": "#0F172A",
+        "category_chip_bg": "#F1F5F9",
+        "category_chip_active": "#4F46E5",
+        "category_chip_text": "#0F172A",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(15, 23, 42, 0.6)",
+        "modal_handle": "#CBD5E1",
+        "btn_primary_bg": "#4F46E5",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#4F46E5"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#6366F1",
+        "primary_hover": "#818CF8",
+        "primary_gradient_start": "#6366F1",
+        "primary_gradient_end": "#2DD4BF",
+        "accent": "#2DD4BF",
+        "bg_body": "#0B1120",
+        "bg_card": "#151E2E",
+        "bg_surface": "#1E293B",
+        "text_main": "#F8FAFC",
+        "text_muted": "#94A3B8",
+        "border": "rgba(255, 255, 255, 0.08)",
+        "navbar_bg": "#151E2E",
+        "navbar_text": "#F8FAFC",
+        "bottom_bar_bg": "#151E2E",
+        "bottom_bar_active": "#6366F1",
+        "bottom_bar_inactive": "#64748B",
+        "card_bg": "#151E2E",
+        "card_border": "rgba(255, 255, 255, 0.08)",
+        "card_title": "#F8FAFC",
+        "price_color": "#818CF8",
+        "old_price_color": "#64748B",
+        "badge_bg": "#EF4444",
+        "badge_text": "#FFFFFF",
+        "section_title": "#F8FAFC",
+        "category_chip_bg": "#1E293B",
+        "category_chip_active": "#6366F1",
+        "category_chip_text": "#F8FAFC",
+        "modal_bg": "#151E2E",
+        "modal_overlay": "rgba(0, 0, 0, 0.85)",
+        "modal_handle": "#475569",
+        "btn_primary_bg": "#6366F1",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#6366F1"
+      }
+    },
+    "typography": {
+      "font_family": "Tajawal",
+      "base_size": "16px",
+      "heading_weight": "700",
+      "heading_size_mobile": "1.15rem",
+      "heading_size_desktop": "1.45rem",
+      "price_size_mobile": "1.1rem",
+      "price_size_desktop": "1.25rem"
+    },
+    "shapes": {
+      "card_radius": "20px",
+      "button_radius": "9999px",
+      "button_style": "pill",
+      "card_style": "elevated",
+      "navbar_style": "glass",
+      "section_spacing": "normal"
+    },
+    "animations": {
+      "card_hover": "lift"
+    },
+    "products_settings": {
+      "display_mode": "featured_first",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": true,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "classic"
+      },
+      "landscape": {
+        "grid_columns": 4,
+        "card_orientation": "landscape",
+        "card_style": "classic"
+      },
+      "add_to_cart_btn": {
+        "style": "pill_text",
+        "action_animation": "scale"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "glass",
+        "items": [
+          { "id": "home", "label": "الرئيسية", "icon": "fa-home", "visible": true, "order": 1 },
+          { "id": "search", "label": "بحث", "icon": "fa-search", "visible": true, "order": 2 },
+          { "id": "orders", "label": "طلباتي", "icon": "fa-box-open", "visible": true, "order": 3 },
+          { "id": "favorites", "label": "المفضلة", "icon": "fa-heart", "visible": true, "order": 4 },
+          { "id": "cart", "label": "السلة", "icon": "fa-shopping-cart", "visible": true, "order": 5 }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-store",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "glass"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "مساعد نالش",
+      "persona": "classic",
+      "button_style": "pill",
+      "avatar_style": "pulse",
+      "accent_color": "#4F46E5"
+    }
+  }
+}

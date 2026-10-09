@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sapphire_royal",
+    "name": "ياقوت أزرق ملكي",
+    "category": "أناقة ملكية",
+    "description": "أزرق ياقوتي عميق مع لمسات سماوية أنيقة.",
+    "light": { "primary": "#1D4ED8", "primaryHover": "#1E40AF", "gradientEnd": "#60A5FA", "accent": "#0EA5E9", "body": "#EFF6FF", "surface": "#DBEAFE", "textMain": "#172554", "textMuted": "#1E40AF", "border": "#BFDBFE" },
+    "dark": { "primary": "#60A5FA", "primaryHover": "#93C5FD", "gradientEnd": "#38BDF8", "accent": "#7DD3FC", "body": "#07142B", "card": "#10254A", "surface": "#173565", "textMain": "#EFF6FF", "textMuted": "#BFDBFE", "border": "#1E40AF" }
+  },
+  {
+    "id": "amethyst_royal",
+    "name": "جمشت بنفسجي ملكي",
+    "category": "أناقة ملكية",
+    "description": "بنفسجي جمشت غني يوازن بين الفخامة والحداثة.",
+    "light": { "primary": "#7E22CE", "primaryHover": "#6B21A8", "gradientEnd": "#C084FC", "accent": "#A855F7", "body": "#FAF5FF", "surface": "#F3E8FF", "textMain": "#3B0764", "textMuted": "#6B21A8", "border": "#E9D5FF" },
+    "dark": { "primary": "#C084FC", "primaryHover": "#D8B4FE", "gradientEnd": "#A855F7", "accent": "#E879F9", "body": "#190B2B", "card": "#2B1245", "surface": "#3B1A5E", "textMain": "#FAF5FF", "textMuted": "#E9D5FF", "border": "#6B21A8" }
+  },
+  {
+    "id": "granite_silver",
+    "name": "فضة الغرانيت",
+    "category": "عصري ومحايد",
+    "description": "رمادي حجري راقٍ مع إبرازات فولاذية هادئة.",
+    "light": { "primary": "#475569", "primaryHover": "#334155", "gradientEnd": "#94A3B8", "accent": "#64748B", "body": "#F8FAFC", "surface": "#E2E8F0", "textMain": "#0F172A", "textMuted": "#475569", "border": "#CBD5E1" },
+    "dark": { "primary": "#CBD5E1", "primaryHover": "#E2E8F0", "gradientEnd": "#94A3B8", "accent": "#A5B4FC", "body": "#10151D", "card": "#1C2633", "surface": "#293646", "textMain": "#F8FAFC", "textMuted": "#CBD5E1", "border": "#475569" }
+  },
+  {
+    "id": "flamingo_blush",
+    "name": "توهج الفلامنغو",
+    "category": "جمال وعناية",
+    "description": "مرجاني وردي ناعم يمنح واجهات الجمال حيوية راقية.",
+    "light": { "primary": "#DB2777", "primaryHover": "#BE185D", "gradientEnd": "#FB7185", "accent": "#F472B6", "body": "#FFF1F2", "surface": "#FFE4E6", "textMain": "#4C0519", "textMuted": "#9D174D", "border": "#FECDD3" },
+    "dark": { "primary": "#FB7185", "primaryHover": "#FDA4AF", "gradientEnd": "#F472B6", "accent": "#F9A8D4", "body": "#230914", "card": "#3D1026", "surface": "#561735", "textMain": "#FFF1F2", "textMuted": "#FECDD3", "border": "#9D174D" }
+  },
+  {
+    "id": "oxblood_mahogany",
+    "name": "ماهوجني أكسيد الدم",
+    "category": "جلديات وفخامة",
+    "description": "أحمر ماهوجني عميق بلمسات جلدية دافئة.",
+    "light": { "primary": "#9F1239", "primaryHover": "#881337", "gradientEnd": "#E11D48", "accent": "#C2410C", "body": "#FFF7F5", "surface": "#FEE2E2", "textMain": "#3F0A1A", "textMuted": "#881337", "border": "#FECACA" },
+    "dark": { "primary": "#FB7185", "primaryHover": "#FDA4AF", "gradientEnd": "#E11D48", "accent": "#FDBA74", "body": "#1D080E", "card": "#35111B", "surface": "#4B1825", "textMain": "#FFF7F5", "textMuted": "#FECDD3", "border": "#881337" }
+  },
+  {
+    "id": "lagoon_cobalt",
+    "name": "كوبالت البحيرة",
+    "category": "تقنية ومياه",
+    "description": "كوبالت صافٍ مع تدرجات فيروزية مستوحاة من البحيرات.",
+    "light": { "primary": "#0369A1", "primaryHover": "#075985", "gradientEnd": "#38BDF8", "accent": "#14B8A6", "body": "#F0F9FF", "surface": "#E0F2FE", "textMain": "#082F49", "textMuted": "#075985", "border": "#BAE6FD" },
+    "dark": { "primary": "#38BDF8", "primaryHover": "#7DD3FC", "gradientEnd": "#2DD4BF", "accent": "#5EEAD4", "body": "#041724", "card": "#0B2A3D", "surface": "#10405A", "textMain": "#F0F9FF", "textMuted": "#BAE6FD", "border": "#0E7490" }
+  },
+  {
+    "id": "champagne_cream",
+    "name": "شمبانيا كريمية",
+    "category": "ضيافة وفخامة",
+    "description": "كريمي دافئ ولمسات شامبانيا رقيقة للعلامات الراقية.",
+    "light": { "primary": "#A16207", "primaryHover": "#854D0E", "gradientEnd": "#EAB308", "accent": "#B45309", "body": "#FFFCF2", "surface": "#FEF3C7", "textMain": "#422006", "textMuted": "#854D0E", "border": "#FDE68A" },
+    "dark": { "primary": "#FCD34D", "primaryHover": "#FDE68A", "gradientEnd": "#F59E0B", "accent": "#FDBA74", "body": "#1C1405", "card": "#30230A", "surface": "#48330D", "textMain": "#FFFBEB", "textMuted": "#FDE68A", "border": "#92400E" }
+  },
+  {
+    "id": "desert_sandstone",
+    "name": "حجر رملي صحراوي",
+    "category": "طبيعة وأرض",
+    "description": "ألوان رملية مطفأة مع بني حجري متزن.",
+    "light": { "primary": "#A0522D", "primaryHover": "#7C2D12", "gradientEnd": "#D97745", "accent": "#C2410C", "body": "#FFF9F3", "surface": "#F5E7D8", "textMain": "#3B2418", "textMuted": "#70452E", "border": "#E7CDB5" },
+    "dark": { "primary": "#F0A778", "primaryHover": "#F6C29E", "gradientEnd": "#D97745", "accent": "#FDBA74", "body": "#1C100A", "card": "#302016", "surface": "#493020", "textMain": "#FFF7ED", "textMuted": "#E7CDB5", "border": "#8B4D2E" }
+  },
+  {
+    "id": "blue_steel",
+    "name": "فولاذ أزرق",
+    "category": "أعمال واحتراف",
+    "description": "أزرق فولاذي ثابت وواضح للمتاجر العملية والاحترافية.",
+    "light": { "primary": "#1E5A78", "primaryHover": "#16445D", "gradientEnd": "#4C9AB3", "accent": "#0F766E", "body": "#F2F8FA", "surface": "#DCEBF0", "textMain": "#102A38", "textMuted": "#36596A", "border": "#B9D2DC" },
+    "dark": { "primary": "#67B8D0", "primaryHover": "#9AD3E2", "gradientEnd": "#2DD4BF", "accent": "#5EEAD4", "body": "#07171D", "card": "#102832", "surface": "#183A47", "textMain": "#F0FAFC", "textMuted": "#B9D2DC", "border": "#286274" }
+  },
+  {
+    "id": "orchid_magenta",
+    "name": "أوركيد أرجواني",
+    "category": "إبداع وفنون",
+    "description": "أرجواني أوركيد نابض بلمسات توتيّة جريئة.",
+    "light": { "primary": "#A21CAF", "primaryHover": "#86198F", "gradientEnd": "#E879F9", "accent": "#C026D3", "body": "#FDF4FF", "surface": "#FAE8FF", "textMain": "#4A044E", "textMuted": "#86198F", "border": "#F5D0FE" },
+    "dark": { "primary": "#E879F9", "primaryHover": "#F0ABFC", "gradientEnd": "#C026D3", "accent": "#F0ABFC", "body": "#210924", "card": "#39123D", "surface": "#501A55", "textMain": "#FDF4FF", "textMuted": "#F5D0FE", "border": "#86198F" }
+  },
+  {
+    "id": "pine_balsam",
+    "name": "بلسم الصنوبر",
+    "category": "طبيعة وعافية",
+    "description": "أخضر صنوبر هادئ بطابع طبيعي متوازن.",
+    "light": { "primary": "#166534", "primaryHover": "#14532D", "gradientEnd": "#4ADE80", "accent": "#65A30D", "body": "#F3FBF4", "surface": "#DCFCE7", "textMain": "#052E16", "textMuted": "#166534", "border": "#BBF7D0" },
+    "dark": { "primary": "#4ADE80", "primaryHover": "#86EFAC", "gradientEnd": "#22C55E", "accent": "#A3E635", "body": "#06170C", "card": "#102719", "surface": "#173A24", "textMain": "#F0FDF4", "textMuted": "#BBF7D0", "border": "#166534" }
+  },
+  {
+    "id": "plum_noir",
+    "name": "برقوقي ليلي",
+    "category": "مساء وأناقة",
+    "description": "برقوقي داكن أنيق يضفي عمقاً دون أن يثقل التصميم.",
+    "light": { "primary": "#701A75", "primaryHover": "#581C5F", "gradientEnd": "#C084FC", "accent": "#9333EA", "body": "#FBF7FC", "surface": "#F3E8F5", "textMain": "#2E1233", "textMuted": "#6B3A73", "border": "#E5D1E9" },
+    "dark": { "primary": "#D8A4E2", "primaryHover": "#E9C5EF", "gradientEnd": "#A855F7", "accent": "#C084FC", "body": "#180C1B", "card": "#2A1530", "surface": "#3B1D42", "textMain": "#FBF7FC", "textMuted": "#E5D1E9", "border": "#713A7B" }
+  },
+  {
+    "id": "copper_rust",
+    "name": "نحاس صدئ",
+    "category": "حرف وتصميم",
+    "description": "نحاسي محروق غني بطابع حرفي عصري.",
+    "light": { "primary": "#B45309", "primaryHover": "#92400E", "gradientEnd": "#F97316", "accent": "#C2410C", "body": "#FFF8F1", "surface": "#FFEDD5", "textMain": "#431407", "textMuted": "#7C2D12", "border": "#FED7AA" },
+    "dark": { "primary": "#FB923C", "primaryHover": "#FDBA74", "gradientEnd": "#EA580C", "accent": "#FDBA74", "body": "#1C0D05", "card": "#32190B", "surface": "#4A2611", "textMain": "#FFF7ED", "textMuted": "#FED7AA", "border": "#9A3412" }
+  },
+  {
+    "id": "glacier_blue",
+    "name": "جليد أزرق",
+    "category": "نقاء وانتعاش",
+    "description": "أزرق جليدي منعش مع تباين واضح ومريح للعين.",
+    "light": { "primary": "#0B6F94", "primaryHover": "#075985", "gradientEnd": "#7DD3FC", "accent": "#06B6D4", "body": "#F0FAFF", "surface": "#E0F2FE", "textMain": "#082F49", "textMuted": "#075985", "border": "#BAE6FD" },
+    "dark": { "primary": "#7DD3FC", "primaryHover": "#BAE6FD", "gradientEnd": "#38BDF8", "accent": "#67E8F9", "body": "#061923", "card": "#0B2A3A", "surface": "#104057", "textMain": "#F0FAFF", "textMuted": "#BAE6FD", "border": "#0369A1" }
+  },
+  {
+    "id": "moss_sage",
+    "name": "مريمية الطحلب",
+    "category": "طبيعة هادئة",
+    "description": "أخضر مريمي مطفأ ولمسات طحلبية أنيقة.",
+    "light": { "primary": "#4D7C0F", "primaryHover": "#3F6212", "gradientEnd": "#A3E635", "accent": "#65A30D", "body": "#F8FAF0", "surface": "#ECFCCB", "textMain": "#1A2E05", "textMuted": "#3F6212", "border": "#D9F99D" },
+    "dark": { "primary": "#BEF264", "primaryHover": "#D9F99D", "gradientEnd": "#84CC16", "accent": "#A3E635", "body": "#111706", "card": "#20290E", "surface": "#303D16", "textMain": "#F7FEE7", "textMuted": "#D9F99D", "border": "#4D7C0F" }
+  },
+  {
+    "id": "scarlet_pop",
+    "name": "قرمزي نابض",
+    "category": "طاقة وحيوية",
+    "description": "قرمزي قوي وتدرج وردي مشرق للعلامات الحيوية.",
+    "light": { "primary": "#C81E1E", "primaryHover": "#991B1B", "gradientEnd": "#F87171", "accent": "#EA580C", "body": "#FFF5F4", "surface": "#FEE2E2", "textMain": "#450A0A", "textMuted": "#991B1B", "border": "#FECACA" },
+    "dark": { "primary": "#F87171", "primaryHover": "#FCA5A5", "gradientEnd": "#EF4444", "accent": "#FDBA74", "body": "#200707", "card": "#381010", "surface": "#501717", "textMain": "#FFF5F4", "textMuted": "#FECACA", "border": "#991B1B" }
+  },
+  {
+    "id": "aqua_marine",
+    "name": "أكوامارين",
+    "category": "بحر وانتعاش",
+    "description": "أكوامارين صافٍ مع أخضر مائي منعش.",
+    "light": { "primary": "#0F766E", "primaryHover": "#115E59", "gradientEnd": "#5EEAD4", "accent": "#0891B2", "body": "#F0FDFA", "surface": "#CCFBF1", "textMain": "#042F2E", "textMuted": "#115E59", "border": "#99F6E4" },
+    "dark": { "primary": "#5EEAD4", "primaryHover": "#99F6E4", "gradientEnd": "#2DD4BF", "accent": "#67E8F9", "body": "#041B1A", "card": "#0B302E", "surface": "#104441", "textMain": "#F0FDFA", "textMuted": "#99F6E4", "border": "#0F766E" }
+  },
+  {
+    "id": "saffron_spice",
+    "name": "زعفران دافئ",
+    "category": "مذاق وضيافة",
+    "description": "زعفراني مشرق بلمسات توابل دافئة.",
+    "light": { "primary": "#A94F0A", "primaryHover": "#7C2D12", "gradientEnd": "#FBBF24", "accent": "#D97706", "body": "#FFFBEB", "surface": "#FEF3C7", "textMain": "#451A03", "textMuted": "#78350F", "border": "#FDE68A" },
+    "dark": { "primary": "#FBBF24", "primaryHover": "#FDE68A", "gradientEnd": "#F59E0B", "accent": "#FDBA74", "body": "#1B1204", "card": "#302109", "surface": "#49310D", "textMain": "#FFFBEB", "textMuted": "#FDE68A", "border": "#92400E" }
+  },
+  {
+    "id": "espresso_mahogany",
+    "name": "إسبريسو وماهوجني",
+    "category": "قهوة وحرفية",
+    "description": "بني إسبريسو عميق مع تباين عاجي دافئ.",
+    "light": { "primary": "#78350F", "primaryHover": "#5C2A0B", "gradientEnd": "#B45309", "accent": "#A16207", "body": "#FFFAF5", "surface": "#F5E6D3", "textMain": "#2B170C", "textMuted": "#70452E", "border": "#E7CDB5" },
+    "dark": { "primary": "#D6A77A", "primaryHover": "#E8C6A3", "gradientEnd": "#B45309", "accent": "#FCD34D", "body": "#170D08", "card": "#2A1A10", "surface": "#3D2718", "textMain": "#FFF7ED", "textMuted": "#E7CDB5", "border": "#70452E" }
+  },
+  {
+    "id": "citron_verdant",
+    "name": "ليمون أخضر راقٍ",
+    "category": "حيوية وطبيعة",
+    "description": "ليموني أخضر متوازن مع درجات غابية داكنة.",
+    "light": { "primary": "#3F7D20", "primaryHover": "#315F19", "gradientEnd": "#A3D977", "accent": "#65A30D", "body": "#F7FBF2", "surface": "#E7F2D8", "textMain": "#1B2E11", "textMuted": "#3F6212", "border": "#CDE3B2" },
+    "dark": { "primary": "#A3D977", "primaryHover": "#C1E6A1", "gradientEnd": "#65A30D", "accent": "#BEF264", "body": "#10170B", "card": "#202C15", "surface": "#30401E", "textMain": "#F7FEE7", "textMuted": "#D9F99D", "border": "#4D7C0F" }
+  }
+]

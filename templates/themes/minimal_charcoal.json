@@ -1,0 +1,165 @@
+{
+  "id": "minimal_charcoal",
+  "name": "فحم ومونوكروم عصري 🖤",
+  "description": "أسلوب مونوكروم فائق البساطة يركز 100% على صور المنتجات بنقاء تام في الفاتح والداكن.",
+  "category": "مينيمال وبسيط",
+  "preview": {
+    "primary": "#18181B",
+    "accent": "#52525B",
+    "background": "#FAFAFA"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "minimal_charcoal",
+    "default_theme_mode": "light",
+    "light_theme": {
+      "colors": {
+        "primary": "#18181B",
+        "primary_hover": "#27272A",
+        "primary_gradient_start": "#18181B",
+        "primary_gradient_end": "#3F3F46",
+        "accent": "#52525B",
+        "bg_body": "#FAFAFA",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#F4F4F5",
+        "text_main": "#18181B",
+        "text_muted": "#71717A",
+        "border": "#E4E4E7",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#18181B",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#18181B",
+        "bottom_bar_inactive": "#71717A",
+        "card_bg": "#FFFFFF",
+        "card_border": "#E4E4E7",
+        "card_title": "#18181B",
+        "price_color": "#18181B",
+        "old_price_color": "#71717A",
+        "badge_bg": "#18181B",
+        "badge_text": "#FFFFFF",
+        "section_title": "#18181B",
+        "category_chip_bg": "#F4F4F5",
+        "category_chip_active": "#18181B",
+        "category_chip_text": "#FFFFFF",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(24, 24, 27, 0.6)",
+        "modal_handle": "#E4E4E7",
+        "btn_primary_bg": "#18181B",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#18181B"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#FAFAFA",
+        "primary_hover": "#FFFFFF",
+        "primary_gradient_start": "#FAFAFA",
+        "primary_gradient_end": "#E4E4E7",
+        "accent": "#A1A1AA",
+        "bg_body": "#09090B",
+        "bg_card": "#18181B",
+        "bg_surface": "#27272A",
+        "text_main": "#FAFAFA",
+        "text_muted": "#A1A1AA",
+        "border": "#27272A",
+        "navbar_bg": "#18181B",
+        "navbar_text": "#FAFAFA",
+        "bottom_bar_bg": "#18181B",
+        "bottom_bar_active": "#FAFAFA",
+        "bottom_bar_inactive": "#A1A1AA",
+        "card_bg": "#18181B",
+        "card_border": "#27272A",
+        "card_title": "#FAFAFA",
+        "price_color": "#FAFAFA",
+        "old_price_color": "#71717A",
+        "badge_bg": "#FAFAFA",
+        "badge_text": "#09090B",
+        "section_title": "#FAFAFA",
+        "category_chip_bg": "#27272A",
+        "category_chip_active": "#FAFAFA",
+        "category_chip_text": "#09090B",
+        "modal_bg": "#18181B",
+        "modal_overlay": "rgba(0, 0, 0, 0.9)",
+        "modal_handle": "#3F3F46",
+        "btn_primary_bg": "#FAFAFA",
+        "btn_primary_text": "#09090B",
+        "chatbot_btn_bg": "#FAFAFA"
+      }
+    },
+    "typography": {
+      "font_family": "Tajawal",
+      "base_size": "16px",
+      "heading_weight": "700",
+      "heading_size_mobile": "1.1rem",
+      "heading_size_desktop": "1.4rem",
+      "price_size_mobile": "1.05rem",
+      "price_size_desktop": "1.2rem"
+    },
+    "shapes": {
+      "card_radius": "4px",
+      "button_radius": "4px",
+      "button_style": "square",
+      "card_style": "flat",
+      "navbar_style": "minimal",
+      "section_spacing": "compact"
+    },
+    "animations": {
+      "card_hover": "none"
+    },
+    "products_settings": {
+      "display_mode": "all_flat_grid",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": false,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "minimal"
+      },
+      "landscape": {
+        "grid_columns": 5,
+        "card_orientation": "landscape",
+        "card_style": "minimal"
+      },
+      "add_to_cart_btn": {
+        "style": "circle_icon",
+        "action_animation": "none"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "minimal",
+        "items": [
+          { "id": "home", "label": "الرئيسية", "icon": "fa-home", "visible": true, "order": 1 },
+          { "id": "search", "label": "بحث", "icon": "fa-search", "visible": true, "order": 2 },
+          { "id": "orders", "label": "طلباتي", "icon": "fa-box-open", "visible": true, "order": 3 },
+          { "id": "favorites", "label": "المفضلة", "icon": "fa-heart", "visible": true, "order": 4 },
+          { "id": "cart", "label": "السلة", "icon": "fa-shopping-cart", "visible": true, "order": 5 }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-bag-shopping",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "minimal"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "مساعد المتجر",
+      "persona": "classic",
+      "button_style": "minimal",
+      "avatar_style": "pulse",
+      "accent_color": "#18181B"
+    }
+  }
+}

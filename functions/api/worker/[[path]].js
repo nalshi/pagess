@@ -49,10 +49,12 @@ export async function onRequest(context) {
   // ⚡⚡ مسار WebSocket المنفصل — ترقية كاملة ومباشرة للـ Worker
   const isWebSocketUpgrade = request.headers.get('Upgrade')?.toLowerCase() === 'websocket';
   if (isWebSocketUpgrade || cleanSubpath === '/ws') {
-    // التحقق الأمني: التوكن ومعرف التاجر موجودان في query params (يُتحقق منهما في Worker)
+    // التحقق الأمني: إما تذكرة مؤقتة (ticket + m) أو التوكن القديم (token + merchant_id)
+    const ticket = originalUrl.searchParams.get('ticket');
+    const merchantId = originalUrl.searchParams.get('m') || originalUrl.searchParams.get('merchant_id');
     const token = originalUrl.searchParams.get('token');
-    const merchantId = originalUrl.searchParams.get('merchant_id');
-    if (!token || !merchantId) {
+
+    if (!merchantId || (!ticket && !token)) {
       return new Response(JSON.stringify({ status: 'error', message: 'بيانات الاتصال غير مكتملة' }), {
         status: 401,
         headers: { 'Content-Type': 'application/json' },

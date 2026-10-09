@@ -1,0 +1,195 @@
+{
+  "id": "oxblood_mahogany",
+  "name": "ماهوجني أكسيد الدم",
+  "description": "أحمر ماهوجني عميق بلمسات جلدية دافئة.",
+  "category": "جلديات وفخامة",
+  "preview": {
+    "primary": "#9F1239",
+    "accent": "#C2410C",
+    "background": "#FFF7F5"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "oxblood_mahogany",
+    "default_theme_mode": "light",
+    "light_theme": {
+      "colors": {
+        "primary": "#9F1239",
+        "primary_hover": "#881337",
+        "primary_gradient_start": "#9F1239",
+        "primary_gradient_end": "#E11D48",
+        "accent": "#C2410C",
+        "bg_body": "#FFF7F5",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#FEE2E2",
+        "text_main": "#3F0A1A",
+        "text_muted": "#881337",
+        "border": "#FECACA",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#3F0A1A",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#9F1239",
+        "bottom_bar_inactive": "#881337",
+        "card_bg": "#FFFFFF",
+        "card_border": "#FECACA",
+        "card_title": "#3F0A1A",
+        "price_color": "#9F1239",
+        "old_price_color": "#881337",
+        "badge_bg": "#E11D48",
+        "badge_text": "#FFFFFF",
+        "section_title": "#3F0A1A",
+        "category_chip_bg": "#FEE2E2",
+        "category_chip_active": "#9F1239",
+        "category_chip_text": "#3F0A1A",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(63, 10, 26, 0.6)",
+        "modal_handle": "#FECACA",
+        "btn_primary_bg": "#9F1239",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#9F1239"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#FB7185",
+        "primary_hover": "#FDA4AF",
+        "primary_gradient_start": "#FB7185",
+        "primary_gradient_end": "#E11D48",
+        "accent": "#FDBA74",
+        "bg_body": "#1D080E",
+        "bg_card": "#35111B",
+        "bg_surface": "#4B1825",
+        "text_main": "#FFF7F5",
+        "text_muted": "#FECDD3",
+        "border": "#881337",
+        "navbar_bg": "#35111B",
+        "navbar_text": "#FFF7F5",
+        "bottom_bar_bg": "#35111B",
+        "bottom_bar_active": "#FB7185",
+        "bottom_bar_inactive": "#FECDD3",
+        "card_bg": "#35111B",
+        "card_border": "#881337",
+        "card_title": "#FFF7F5",
+        "price_color": "#FB7185",
+        "old_price_color": "#FECDD3",
+        "badge_bg": "#F43F5E",
+        "badge_text": "#FFFFFF",
+        "section_title": "#FFF7F5",
+        "category_chip_bg": "#4B1825",
+        "category_chip_active": "#FB7185",
+        "category_chip_text": "#FFF7F5",
+        "modal_bg": "#35111B",
+        "modal_overlay": "rgba(0, 0, 0, 0.85)",
+        "modal_handle": "#881337",
+        "btn_primary_bg": "#FB7185",
+        "btn_primary_text": "#1D080E",
+        "chatbot_btn_bg": "#FB7185"
+      }
+    },
+    "typography": {
+      "font_family": "Cairo",
+      "base_size": "16px",
+      "heading_weight": "800",
+      "heading_size_mobile": "1.2rem",
+      "heading_size_desktop": "1.5rem",
+      "price_size_mobile": "1.15rem",
+      "price_size_desktop": "1.3rem"
+    },
+    "shapes": {
+      "card_radius": "24px",
+      "button_radius": "14px",
+      "button_style": "rounded",
+      "card_style": "magazine",
+      "navbar_style": "floating",
+      "section_spacing": "relaxed"
+    },
+    "animations": {
+      "card_hover": "scale"
+    },
+    "products_settings": {
+      "display_mode": "featured_first",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": true,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "magazine"
+      },
+      "landscape": {
+        "grid_columns": 3,
+        "card_orientation": "landscape",
+        "card_style": "magazine"
+      },
+      "add_to_cart_btn": {
+        "style": "rounded_box",
+        "action_animation": "scale"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "floating",
+        "items": [
+          {
+            "id": "home",
+            "label": "الرئيسية",
+            "icon": "fa-home",
+            "visible": true,
+            "order": 1
+          },
+          {
+            "id": "search",
+            "label": "بحث",
+            "icon": "fa-search",
+            "visible": true,
+            "order": 2
+          },
+          {
+            "id": "orders",
+            "label": "طلباتي",
+            "icon": "fa-box-open",
+            "visible": true,
+            "order": 3
+          },
+          {
+            "id": "favorites",
+            "label": "المفضلة",
+            "icon": "fa-heart",
+            "visible": true,
+            "order": 4
+          },
+          {
+            "id": "cart",
+            "label": "السلة",
+            "icon": "fa-shopping-cart",
+            "visible": true,
+            "order": 5
+          }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-crown",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "floating"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "مستشار الفخامة",
+      "persona": "luxury",
+      "button_style": "bubble",
+      "avatar_style": "halo",
+      "accent_color": "#9F1239"
+    }
+  }
+}

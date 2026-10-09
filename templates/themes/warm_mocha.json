@@ -1,0 +1,165 @@
+{
+  "id": "warm_mocha",
+  "name": "موكا وبن كافيه ☕",
+  "description": "درجات البن والكراميل الدافئة للمقاهي، المخابز، ومتاجر الحلويات الحرفية الراقية.",
+  "category": "مقاهي وحلويات",
+  "preview": {
+    "primary": "#92400E",
+    "accent": "#B45309",
+    "background": "#FFFBEB"
+  },
+  "config": {
+    "version": "4.0",
+    "theme_version": "4.0",
+    "theme_name": "warm_mocha",
+    "default_theme_mode": "light",
+    "light_theme": {
+      "colors": {
+        "primary": "#92400E",
+        "primary_hover": "#78350F",
+        "primary_gradient_start": "#92400E",
+        "primary_gradient_end": "#D97706",
+        "accent": "#B45309",
+        "bg_body": "#FFFBEB",
+        "bg_card": "#FFFFFF",
+        "bg_surface": "#FEF3C7",
+        "text_main": "#451A03",
+        "text_muted": "#78350F",
+        "border": "#FDE68A",
+        "navbar_bg": "#FFFFFF",
+        "navbar_text": "#451A03",
+        "bottom_bar_bg": "#FFFFFF",
+        "bottom_bar_active": "#92400E",
+        "bottom_bar_inactive": "#78350F",
+        "card_bg": "#FFFFFF",
+        "card_border": "#FDE68A",
+        "card_title": "#451A03",
+        "price_color": "#92400E",
+        "old_price_color": "#78350F",
+        "badge_bg": "#B91C1C",
+        "badge_text": "#FFFFFF",
+        "section_title": "#451A03",
+        "category_chip_bg": "#FEF3C7",
+        "category_chip_active": "#92400E",
+        "category_chip_text": "#451A03",
+        "modal_bg": "#FFFFFF",
+        "modal_overlay": "rgba(69, 26, 3, 0.6)",
+        "modal_handle": "#FDE68A",
+        "btn_primary_bg": "#92400E",
+        "btn_primary_text": "#FFFFFF",
+        "chatbot_btn_bg": "#92400E"
+      }
+    },
+    "dark_theme": {
+      "colors": {
+        "primary": "#FBBF24",
+        "primary_hover": "#FCD34D",
+        "primary_gradient_start": "#FBBF24",
+        "primary_gradient_end": "#B45309",
+        "accent": "#D97706",
+        "bg_body": "#180D04",
+        "bg_card": "#2D1808",
+        "bg_surface": "#40240E",
+        "text_main": "#FFFBEB",
+        "text_muted": "#FDE68A",
+        "border": "#78350F",
+        "navbar_bg": "#2D1808",
+        "navbar_text": "#FFFBEB",
+        "bottom_bar_bg": "#2D1808",
+        "bottom_bar_active": "#FBBF24",
+        "bottom_bar_inactive": "#FDE68A",
+        "card_bg": "#2D1808",
+        "card_border": "#78350F",
+        "card_title": "#FFFBEB",
+        "price_color": "#FBBF24",
+        "old_price_color": "#FDE68A",
+        "badge_bg": "#DC2626",
+        "badge_text": "#FFFFFF",
+        "section_title": "#FFFBEB",
+        "category_chip_bg": "#40240E",
+        "category_chip_active": "#FBBF24",
+        "category_chip_text": "#FFFBEB",
+        "modal_bg": "#2D1808",
+        "modal_overlay": "rgba(0, 0, 0, 0.85)",
+        "modal_handle": "#78350F",
+        "btn_primary_bg": "#FBBF24",
+        "btn_primary_text": "#180D04",
+        "chatbot_btn_bg": "#FBBF24"
+      }
+    },
+    "typography": {
+      "font_family": "Cairo",
+      "base_size": "16px",
+      "heading_weight": "700",
+      "heading_size_mobile": "1.15rem",
+      "heading_size_desktop": "1.45rem",
+      "price_size_mobile": "1.1rem",
+      "price_size_desktop": "1.25rem"
+    },
+    "shapes": {
+      "card_radius": "16px",
+      "button_radius": "8px",
+      "button_style": "rounded",
+      "card_style": "bordered",
+      "navbar_style": "solid",
+      "section_spacing": "normal"
+    },
+    "animations": {
+      "card_hover": "lift"
+    },
+    "products_settings": {
+      "display_mode": "by_categories_sections",
+      "sort_by": "latest",
+      "out_of_stock_display": "badge_at_end",
+      "show_quick_add": true,
+      "show_stock_badge": true,
+      "show_discount_badge": true,
+      "show_category_tag": true,
+      "show_old_price": true,
+      "show_currency": true,
+      "show_actions": true,
+      "portrait": {
+        "grid_columns": 2,
+        "card_orientation": "portrait",
+        "card_style": "classic"
+      },
+      "landscape": {
+        "grid_columns": 4,
+        "card_orientation": "landscape",
+        "card_style": "classic"
+      },
+      "add_to_cart_btn": {
+        "style": "pill_text",
+        "action_animation": "scale"
+      }
+    },
+    "navigation_settings": {
+      "bottom_bar": {
+        "style": "solid",
+        "items": [
+          { "id": "home", "label": "الرئيسية", "icon": "fa-home", "visible": true, "order": 1 },
+          { "id": "search", "label": "بحث", "icon": "fa-search", "visible": true, "order": 2 },
+          { "id": "orders", "label": "طلباتي", "icon": "fa-box-open", "visible": true, "order": 3 },
+          { "id": "favorites", "label": "المفضلة", "icon": "fa-heart", "visible": true, "order": 4 },
+          { "id": "cart", "label": "السلة", "icon": "fa-shopping-cart", "visible": true, "order": 5 }
+        ]
+      },
+      "top_bar": {
+        "show_logo_icon": true,
+        "logo_icon": "fa-mug-hot",
+        "show_dark_mode_btn": true,
+        "show_profile_btn": true,
+        "show_search_btn": true,
+        "navbar_style": "solid"
+      }
+    },
+    "assistant": {
+      "enabled": true,
+      "name": "باريستا المتجر",
+      "persona": "friendly",
+      "button_style": "bubble",
+      "avatar_style": "pulse",
+      "accent_color": "#92400E"
+    }
+  }
+}

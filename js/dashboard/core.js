@@ -654,10 +654,20 @@
         if (Array.isArray(message.orders)) {
             window.AppStore.setOrders('active', message.orders);
             window.dashboardReadState.activeOrders = true;
+            try {
+                localStorage.setItem('merchant_active_orders_cache', JSON.stringify(message.orders));
+            } catch(e) {}
+            const ordersSection = document.getElementById('orders');
+            if (ordersSection && ordersSection.classList.contains('active') && typeof window.renderOrdersUI === 'function') {
+                window.renderOrdersUI(message.orders, 'active');
+            }
         }
         if (Array.isArray(message.archivedOrders)) {
             window.AppStore.setOrders('archived', message.archivedOrders);
             window.dashboardReadState.archivedOrders = true;
+            try {
+                localStorage.setItem('merchant_archived_orders_cache', JSON.stringify(message.archivedOrders));
+            } catch(e) {}
         }
         if (Array.isArray(message.categories)) {
             window.flatCategoriesList = message.categories;
@@ -737,9 +747,12 @@
             const current = window.AppStore.getOrders('active');
             const next = current.filter(order => String(order.id) !== String(message.order.id));
             if (message.order.status !== 'completed' && message.order.status !== 'cancelled') {
-                next.push(message.order);
+                next.unshift(message.order);
             }
             window.AppStore.setOrders('active', next);
+            try {
+                localStorage.setItem('merchant_active_orders_cache', JSON.stringify(next));
+            } catch(e) {}
             if (!wasKnown && message.order.status === 'pending_merchant_approval') {
                 const ordersSection = document.getElementById('orders');
                 const isOrdersTabOpen = Boolean(ordersSection && ordersSection.classList.contains('active'));

@@ -45,6 +45,7 @@
                     <div class="segment-group orders-filter" role="group" aria-label="تصفية الطلبات">
                     <button class="segment-btn active" onclick="loadOrders('active', this)"><i class="fas fa-bolt"></i> النشطة</button>
                     <button class="segment-btn" onclick="loadOrders('archived', this)"><i class="fas fa-clock-rotate-left"></i> السابقة</button>
+                    <button class="segment-btn" onclick="loadOrders(window._lastOrdersFilter || 'active', null, false)" title="تحديث فوري"><i class="fas fa-rotate"></i></button>
                     </div>
                 </div>
                 <div id="orders-container" class="orders-list-compact">
@@ -124,17 +125,18 @@
 
         try {
             const readKey = filterType + 'Orders';
-            // اللقطة اللحظية تعتبر مصدر البيانات — إذا كانت القناة جاهزة أو تم القراءة مسبقاً،
-            // نعرض الكاش ونخرج دون طلب get_orders مجدداً.
-            if (window.dashboardSocketReady || window.dashboardReadState[readKey]) {
-                // تأكد من رسم الكاش الموجود إن لم يكن UI محدثاً
-                const storeOrders = window.AppStore ? window.AppStore.getOrders(filterType) : [];
-                if (storeOrders && storeOrders.length > 0 && isOrdersTabActive && container) {
+            const storeOrders = window.AppStore ? window.AppStore.getOrders(filterType) : [];
+            const hasOrders = storeOrders && storeOrders.length > 0;
+
+            // إذا كان الكاش مليئاً وكانت القناة اللحظية متصلة وتم الطلب بهدوء (silent)، نكتفي بعرض الكاش
+            if (silent && window.dashboardSocketReady && hasOrders && window.dashboardReadState[readKey]) {
+                if (isOrdersTabActive && container) {
                     window.renderOrdersUI(storeOrders, filterType);
                 }
                 return;
             }
-            if (window.dashboardReadPromises[filterType + 'Orders']) return window.dashboardReadPromises[filterType + 'Orders'];
+
+            if (window.dashboardReadPromises[readKey]) return window.dashboardReadPromises[readKey];
             window.dashboardReadPromises[readKey] = window.apiReq('get_orders', { filter: filterType }, 'POST', false, true);
             const res = await window.dashboardReadPromises[readKey];
             delete window.dashboardReadPromises[readKey];
@@ -142,6 +144,7 @@
 
             if (res && res.status === 'success' && Array.isArray(res.data)) {
                 newOrders = res.data;
+                localStorage.setItem(`merchant_${filterType}_orders_cache`, JSON.stringify(newOrders));
             }
             window.dashboardReadState[readKey] = true;
 

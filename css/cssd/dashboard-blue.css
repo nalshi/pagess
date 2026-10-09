@@ -1833,11 +1833,31 @@ body.dark-mode .orders-page-hero {
 }
 .orders-page-shell .orders-list-compact { gap: 9px; }
 .orders-page-shell .order-card-compact {
+    position: relative;
     min-width: 0;
     min-height: 76px;
     padding: 12px 14px;
+    overflow: hidden;
+    background:
+        linear-gradient(105deg, color-mix(in srgb, var(--primary) 2.5%, transparent), transparent 46%),
+        var(--bg-solid);
     border-radius: 13px;
     box-shadow: none;
+    transition: border-color 0.16s ease, background-color 0.16s ease;
+}
+.orders-page-shell .order-card-compact::before {
+    position: absolute;
+    inset-block: 12px;
+    inset-inline-start: 0;
+    width: 3px;
+    content: "";
+    background: var(--primary);
+    border-radius: 3px 0 0 3px;
+    opacity: 0.55;
+}
+.orders-page-shell .order-card-compact:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--primary) 35%, transparent);
+    outline-offset: 2px;
 }
 .orders-page-shell .order-card-compact:hover {
     background: color-mix(in srgb, var(--primary) 2%, var(--bg-solid));
@@ -1850,13 +1870,24 @@ body.dark-mode .orders-page-hero {
     border: 1px solid color-mix(in srgb, var(--primary) 13%, var(--border-glass));
     border-radius: 12px;
 }
+.orders-page-shell .order-compact-main { gap: 11px; }
 .orders-page-shell .order-compact-header-row { gap: 7px; }
-.orders-page-shell .order-compact-id { font-size: 0.86rem; }
-.orders-page-shell .order-compact-badge { border-radius: 999px; font-size: 0.65rem; }
-.orders-page-shell .order-compact-meta { font-size: 0.71rem; }
+.orders-page-shell .order-compact-id { font-size: 0.88rem; letter-spacing: 0.01em; }
+.orders-page-shell .order-compact-badge {
+    padding: 3px 9px;
+    border: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+    border-radius: 999px;
+    font-size: 0.65rem;
+}
+.orders-page-shell .order-compact-meta {
+    gap: 7px;
+    font-size: 0.71rem;
+    font-weight: 600;
+}
 .orders-page-shell .order-compact-right { gap: 10px; }
-.orders-page-shell .order-compact-price { font-size: 0.95rem; }
-.orders-page-shell .order-compact-date { font-size: 0.66rem; }
+.orders-page-shell .order-compact-price { color: var(--text-main); font-size: 0.95rem; }
+.orders-page-shell .order-compact-price small { color: var(--text-muted); font-weight: 700; }
+.orders-page-shell .order-compact-date { margin-top: 2px; font-size: 0.66rem; }
 .orders-page-shell .order-compact-btn-details {
     min-height: 35px;
     padding: 6px 10px;
@@ -1864,6 +1895,10 @@ body.dark-mode .orders-page-hero {
     border-color: color-mix(in srgb, var(--primary) 17%, var(--border-glass));
     border-radius: 9px;
     font-size: 0.7rem;
+}
+.orders-page-shell .order-compact-btn-details:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }
 .orders-page-shell .orders-empty-state {
     margin: 0;
@@ -1945,6 +1980,16 @@ body.dark-mode .orders-page-hero {
     box-shadow: var(--shadow-4d);
     contain: none;
 }
+.order-detail-modal-content::before {
+    width: 42px;
+    height: 4px;
+    flex: 0 0 auto;
+    align-self: center;
+    margin: -9px 0 12px;
+    content: "";
+    background: color-mix(in srgb, var(--primary) 28%, var(--border-glass));
+    border-radius: 99px;
+}
 .order-detail-modal-content .modal-title-bar {
     position: relative;
     top: auto;
@@ -1969,7 +2014,12 @@ body.dark-mode .orders-page-hero {
     background: var(--bg-body);
     border: 1px solid var(--border-glass);
 }
+.order-detail-modal-content .close-btn:hover {
+    color: var(--primary);
+    border-color: color-mix(in srgb, var(--primary) 35%, var(--border-glass));
+}
 .order-detail-modal-content #single-order-detail-body {
+    flex: 1 1 auto;
     min-height: 0;
     content-visibility: visible;
     contain: none;
@@ -1979,6 +2029,24 @@ body.dark-mode .orders-page-hero {
     scrollbar-color: var(--border-glass) transparent;
     scrollbar-width: thin;
 }
+.order-detail-actions-footer {
+    display: none;
+    flex: 0 0 auto;
+    max-height: min(30vh, 180px);
+    margin-top: 8px;
+    padding: 10px 3px 2px;
+    overflow-y: auto;
+    background: var(--bg-solid);
+    border-top: 1px solid var(--border-glass);
+    scrollbar-width: thin;
+}
+.order-detail-actions-footer:not(:empty) { display: block; }
+.order-detail-actions-footer .order-detail-actions {
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+.order-detail-actions-footer .btn-main { min-height: 44px; }
 .order-detail-summary,
 .order-customer-main,
 .order-financial-total {
@@ -1990,8 +2058,8 @@ body.dark-mode .orders-page-hero {
 .order-detail-summary {
     margin-bottom: 12px;
     padding: 11px 13px;
-    background: var(--bg-body);
-    border: 1px solid var(--border-glass);
+    background: linear-gradient(110deg, color-mix(in srgb, var(--primary) 7%, var(--bg-solid)), var(--bg-body));
+    border: 1px solid color-mix(in srgb, var(--primary) 13%, var(--border-glass));
     border-radius: 12px;
 }
 .order-detail-date {
@@ -2026,7 +2094,7 @@ body.dark-mode .orders-page-hero {
     min-width: 0;
     margin-bottom: 12px;
     padding: 12px 13px;
-    background: color-mix(in srgb, var(--primary) 3%, var(--bg-solid));
+    background: var(--bg-solid);
     border: 1px solid var(--border-glass);
     border-radius: 13px;
 }
@@ -2039,7 +2107,16 @@ body.dark-mode .orders-page-hero {
     font-size: 0.81rem;
     font-weight: 900;
 }
-.order-detail-section h4 i { flex: 0 0 auto; }
+.order-detail-section h4 i {
+    display: grid;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 auto;
+    place-items: center;
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 9%, var(--bg-solid));
+    border-radius: 8px;
+}
 .order-customer-main {
     flex-wrap: wrap;
     color: var(--text-main);
@@ -2080,18 +2157,19 @@ body.dark-mode .orders-page-hero {
 .order-customer-address i { margin-inline-end: 4px; color: var(--danger); }
 .order-detail-items { padding-bottom: 8px; }
 .order-items-list {
-    max-height: min(30vh, 240px);
-    overflow: auto;
-    overscroll-behavior: contain;
+    max-height: none;
+    overflow: visible;
 }
 .order-item-row {
     display: flex;
     min-width: 0;
     align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px dashed var(--border-glass);
+    margin-bottom: 6px;
+    padding: 6px;
+    background: var(--bg-body);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
 }
 .order-item-row:last-child { margin-bottom: 0; }
 .order-item-image {
@@ -2101,7 +2179,7 @@ body.dark-mode .orders-page-hero {
     object-fit: cover;
     background: var(--bg-body);
     border: 1px solid var(--border-glass);
-    border-radius: 10px;
+    border-radius: 9px;
 }
 .order-item-info { min-width: 0; flex: 1; }
 .order-item-name {
@@ -2162,7 +2240,10 @@ body.dark-mode .orders-page-hero {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    padding-top: 1px;
+    padding: 8px;
+    background: var(--bg-body);
+    border: 1px solid var(--border-glass);
+    border-radius: 13px;
 }
 .order-detail-actions .btn-main {
     min-width: 130px;
@@ -2304,9 +2385,9 @@ body.dark-mode .orders-page-hero {
     .order-detail-summary { align-items: flex-start; padding: 10px; }
     .order-customer-main { align-items: flex-start; flex-direction: column; gap: 8px; }
     .order-customer-phone { max-width: 100%; }
-    .order-items-list { max-height: min(28vh, 210px); }
-    .order-detail-actions .btn-main { flex: 1 1 140px; }
-    .order-detail-actions .order-action-cancel { flex: 1 1 110px; }
+    .order-detail-actions-footer { max-height: min(28vh, 160px); padding-top: 8px; }
+    .order-detail-actions-footer .btn-main { flex: 1 1 140px; }
+    .order-detail-actions-footer .order-action-cancel { flex: 1 1 110px; }
     .delivery-code-modal .modal-content {
         width: 100%;
         max-width: none !important;
@@ -2324,9 +2405,9 @@ body.dark-mode .orders-page-hero {
     .order-item-image { width: 42px; height: 42px; }
     .order-item-meta { flex-wrap: wrap; font-size: 0.68rem; }
     .order-financial-total { flex-direction: column; }
-    .order-detail-actions { flex-direction: column; }
-    .order-detail-actions .btn-main,
-    .order-detail-actions .order-action-cancel { width: 100%; flex: 1 1 auto; }
+    .order-detail-actions-footer .order-detail-actions { flex-direction: column; }
+    .order-detail-actions-footer .btn-main,
+    .order-detail-actions-footer .order-action-cancel { width: 100%; flex: 1 1 auto; }
     .delivery-code-modal .modal-content { padding: 15px 11px; }
     .delivery-code-actions { flex-wrap: wrap; }
     .delivery-code-modal .delivery-submit-button,

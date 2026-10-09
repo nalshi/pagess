@@ -762,8 +762,7 @@
                 if (typeof window.addNotification === 'function') {
                     window.addNotification('fa-bell', 'وصل طلب جديد من ' + (message.order.customer_name || 'عميل'), 'warning');
                 }
-                const alert = document.getElementById('new-order-alert');
-                if (alert && !isOrdersTabOpen) alert.classList.add('show');
+                if (!isOrdersTabOpen) window.setOrderAlertVisible?.('new-order-alert', true);
                 if (!isOrdersTabOpen && window.orderAudio && window.currentMerchantData?.settings?.push_notifications !== false) {
                     window.orderAudio.loop = true;
                     window.orderAudio.currentTime = 0;

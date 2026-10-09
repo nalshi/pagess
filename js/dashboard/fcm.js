@@ -44,8 +44,7 @@
                             window.orderAudio.play().catch(() => { });
                         }
 
-                        const alertBox = document.getElementById('new-order-alert');
-                        if (alertBox) alertBox.classList.add('show');
+                        window.setOrderAlertVisible?.('new-order-alert', true);
 
                         if (typeof window.loadOrders === 'function') {
                             window.loadOrders('active', null, true);

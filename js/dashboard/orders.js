@@ -180,10 +180,8 @@
                     if (typeof Notification !== 'undefined' && Notification.permission === 'granted') {
                         new Notification('طلب جديد واصل الآن! 🛍️', { body: 'لديك طلب جديد بانتظار التجهيز.', icon: '/favicon.svg' });
                     }
-                    const alertBar = document.getElementById('persistent-order-alert');
-                    if (alertBar) alertBar.classList.add('show');
-                    const greenAlert = document.getElementById('new-order-alert');
-                    if (greenAlert) greenAlert.classList.add('show');
+                    window.setOrderAlertVisible?.('persistent-order-alert', true);
+                    window.setOrderAlertVisible?.('new-order-alert', true);
                 }
 
                 doRender(newOrders);

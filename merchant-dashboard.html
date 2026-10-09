@@ -35,23 +35,23 @@
 </script>
 
 <!-- تنبيه الطلب الجديد العائم -->
-<div id="new-order-alert" class="new-order-alert">
+<div id="new-order-alert" class="new-order-alert" role="alert" aria-live="assertive" aria-atomic="true" aria-hidden="true">
     <div style="display: flex; align-items: center; gap: 10px;">
         <i data-lucide="bell" class="dashboard-icon shaking-bell-icon"></i>
         <span>طلب جديد واصل الآن! 🛍️</span>
     </div>
-    <button onclick="stopRingingAndGoToOrders()">عرض الطلب</button>
+    <button type="button" onclick="stopRingingAndGoToOrders()">عرض الطلبات</button>
 </div>
 
-<!-- الشريط العلوي للطلبات المعلقة -->
-<div id="persistent-order-alert" class="persistent-alert-bar" onclick="goToPendingOrders()">
-    <div id="persistent-icon" class="persistent-alert-icon"><i data-lucide="bell" class="dashboard-icon"></i></div>
-    <div class="persistent-text-wrapper">
+<!-- شريط حالة الطلبات النشطة -->
+<button id="persistent-order-alert" type="button" class="persistent-alert-bar" onclick="goToPendingOrders()" aria-live="polite" aria-atomic="true" aria-hidden="true">
+    <span id="persistent-icon" class="persistent-alert-icon"><i data-lucide="bell" class="dashboard-icon"></i></span>
+    <span class="persistent-text-wrapper">
         <span id="persistent-title" class="persistent-title">جاري تحميل الحالة...</span>
         <span id="pending-count-text" class="persistent-subtitle">0 طلب نشط</span>
-    </div>
-    <div class="persistent-action-btn">متابعة <i data-lucide="arrow-left" class="dashboard-icon"></i></div>
-</div>
+    </span>
+    <span class="persistent-action-btn">متابعة <i data-lucide="arrow-left" class="dashboard-icon"></i></span>
+</button>
 
 <!-- شاشة تحميل الاتصال اللحظي -->
 <div id="initial-loading-screen">

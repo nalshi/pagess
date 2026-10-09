@@ -81,6 +81,7 @@
                     <div id="single-order-detail-body">
                         <!-- يُحقن محتوى كرت الطلب المحدد عند النقر في 0ms -->
                     </div>
+                    <div id="single-order-detail-actions" class="order-detail-actions-footer"></div>
                 </div>
             </div>`;
             document.body.insertAdjacentHTML('beforeend', modalHtml);
@@ -346,7 +347,8 @@
         }
 
         const bodyEl = document.getElementById('single-order-detail-body');
-        if (!bodyEl) return;
+        const actionsEl = document.getElementById('single-order-detail-actions');
+        if (!bodyEl || !actionsEl) return;
 
         const statusMeta = getStatusMeta(o.status);
 
@@ -465,10 +467,9 @@
                     ${profitBadge}
                 </div>
             </section>
-
-            ${actionButtons}
         `;
 
+        actionsEl.innerHTML = actionButtons;
         bodyEl.scrollTop = 0;
         window.openM('single-order-detail-modal');
     };

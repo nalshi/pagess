@@ -6,7 +6,7 @@ console.log("🔒 جاري تهيئة وحدة المصادقة وتسجيل ا�
 
 // رابط الـ API الخاص بك
 // الكود الصحيح
-const AUTH_API_URL = 'https://api-hluk.onrender.com/api.php';
+const AUTH_API_URL = 'https://api.nalsh.dpdns.org/api.php';
 window.isOtpPending = false;
 window.currentAuthPhone = null;
 window.isProcessingV = false;

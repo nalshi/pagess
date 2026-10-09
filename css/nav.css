@@ -1,0 +1,856 @@
+/* ==========================================================================
+   Navigation Styles (nav.css) - نالش
+   يحتوي على: الهيدر الرئيسي، الهيدر الشفاف، القوائم السفلية، وهيدر المتاجر
+   ========================================================================== */
+
+:root {
+    --announcement-bar-height: 0px;
+    --shipping-bar-height: 0px;
+    --store-top-bars-height: calc(var(--announcement-bar-height, 0px) + var(--shipping-bar-height, 0px));
+}
+
+#storefront-announcement-bar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 10001 !important;
+    box-sizing: border-box !important;
+    transition: all 0.25s ease !important;
+}
+
+#storefront-shipping-bar {
+    position: fixed !important;
+    top: var(--announcement-bar-height, 0px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 10000 !important;
+    box-sizing: border-box !important;
+    transition: all 0.25s ease !important;
+}
+
+/* ----------------------------------
+   1. الهيدر الرئيسي (Main Header)
+------------------------------------- */
+.header-container {
+    position: fixed;
+    top: var(--store-top-bars-height, 0px) !important;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: top 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--theme-card-bg, var(--bg-card)))) !important;
+    color: var(--theme-navbar-text, var(--navbar-text, var(--theme-text-primary, var(--text-main))));
+    border-bottom: 1px solid var(--theme-border, var(--border));
+    box-shadow: var(--shadow-sm);
+    will-change: transform, top;
+    border-radius: var(--theme-topbar-radius, 0px);
+    border-width: var(--theme-topbar-border-width, 1px);
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.header-container .navbar {
+    min-height: var(--theme-topbar-height, 58px);
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.header-container .nav-container {
+    min-height: var(--theme-topbar-height, 58px);
+    background: transparent !important;
+}
+
+.navbar {
+    height: var(--theme-topbar-height, var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--theme-card-bg, var(--bg-card))));
+    color: var(--theme-navbar-text, var(--navbar-text, var(--theme-text-primary, var(--text-main))));
+    border-bottom: 1px solid var(--theme-border, var(--border));
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+    z-index: 100;
+}
+
+.navbar-scrolled {
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--glass-bg))) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--theme-border, var(--border));
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--navbar-text, var(--theme-navbar-text, var(--text-main)));
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo i {
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+/* ----------------------------------
+   2. أزرار الهيدر والإشعارات
+------------------------------------- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--theme-topbar-item-gap, 8px);
+}
+
+.icon-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--theme-topbar-item-radius, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface, var(--bg-card));
+    border: 1px solid var(--border);
+    color: var(--navbar-text, var(--theme-navbar-text, var(--text-main)));
+    font-size: var(--theme-topbar-icon-size, 1.3rem);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.icon-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px var(--primary-glow, rgba(79, 70, 229, 0.2));
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.icon-btn:active {
+    transform: scale(0.95);
+}
+
+/* الوضع الداكن لأزرار وأيقونات الشريط العلوي */
+.dark-mode .header-container,
+.dark-mode .navbar,
+.dark-mode .isolated-header.scrolled {
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--theme-card-bg, var(--bg-card)))) !important;
+    border-color: var(--theme-border, var(--border)) !important;
+    color: var(--theme-navbar-text, var(--navbar-text, var(--theme-text-primary, var(--text-main)))) !important;
+}
+
+.dark-mode .header-container .navbar {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.dark-mode .header-container .sub-navbar {
+    background: transparent !important;
+    border-top: 1px solid var(--theme-border, var(--border)) !important;
+    border-bottom: none !important;
+}
+
+.dark-mode .icon-btn {
+    background: var(--theme-surface, var(--bg-surface, var(--theme-card-bg, var(--bg-card)))) !important;
+    border-color: var(--theme-border, var(--border)) !important;
+    color: var(--theme-navbar-text, var(--navbar-text, var(--theme-text-primary, var(--text-main)))) !important;
+}
+
+.dark-mode .icon-btn:hover {
+    color: var(--theme-primary, var(--primary)) !important;
+    border-color: var(--theme-primary, var(--primary)) !important;
+    box-shadow: 0 0 15px var(--theme-primary-glow, var(--primary-glow, rgba(99, 102, 241, 0.35))) !important;
+}
+
+/* حركة ومظهر أيقونة الوضع الليلي والشمس المتوهجة */
+.mode-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+.dark-mode #theme-icon,
+.dark-mode #iso-theme-icon,
+.dark-mode .mode-icon.fa-sun {
+    color: #FBBF24 !important;
+    text-shadow: 0 0 12px rgba(251, 191, 36, 0.55);
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
+}
+
+.mode-icon.spin-out {
+    animation: iconSpinOut 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+.mode-icon.spin-in {
+    animation: iconSpinIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+}
+
+@keyframes iconSpinOut {
+    0% { transform: scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: scale(0.2) rotate(90deg); opacity: 0; }
+}
+
+@keyframes iconSpinIn {
+    0% { transform: scale(0.2) rotate(-90deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--danger);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-body);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cart-badge.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.user-initial {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* ----------------------------------
+   3. شريط الفئات الفرعي (Sub Navbar)
+------------------------------------- */
+.sub-navbar {
+    height: var(--sub-nav-height);
+    background: transparent;
+    border-bottom: 1px solid var(--theme-border, var(--border));
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    transform: translateZ(0);
+}
+
+.sub-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.sub-nav-item {
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: var(--theme-button-radius, 12px);
+    text-decoration: none;
+    color: var(--theme-text-secondary, var(--text-muted));
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sub-nav-item:hover {
+    color: var(--theme-text-primary, var(--text-main));
+    background: var(--theme-surface, var(--bg-surface));
+}
+
+.sub-nav-item.active {
+    color: var(--theme-primary, var(--primary));
+    background: var(--theme-primary-glow, rgba(99, 102, 241, 0.12));
+    border-color: var(--theme-primary, var(--primary));
+}
+
+.sub-nav-item i {
+    font-size: 1rem;
+}
+
+.sub-nav-item.active {
+    color: var(--primary);
+    background: rgba(79, 70, 229, 0.1);
+    border-color: rgba(79, 70, 229, 0.2);
+}
+
+/* ----------------------------------
+   4. الشريط السفلي للهواتف والمتاجر (Bottom Nav Bars)
+------------------------------------- */
+/* تبديل الشريطين بين الوضع المستقل والوضع العام بدقة */
+body.isolated-mode #mobile-bar {
+    display: none !important;
+}
+body.isolated-mode #isolated-bottom-bar {
+    display: flex !important;
+}
+body:not(.isolated-mode) #isolated-bottom-bar {
+    display: none !important;
+}
+body:not(.isolated-mode) #mobile-bar {
+    display: flex !important;
+}
+
+.mobile-bar,
+.isolated-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--bottom-nav-height, 65px);
+    background: var(--bottom-bar-bg, var(--theme-bottom-nav-bg, var(--theme-bottom-bar-color, var(--glass-bg))));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1500 !important;
+    box-shadow: 0 -10px 25px rgba(0,0,0,0.05);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+.nav-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.72rem;
+    font-weight: 700;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 6px 2px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+.nav-item span {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.2 !important;
+    font-size: clamp(0.64rem, 2.5vw, 0.74rem) !important;
+    margin: 0 !important;
+}
+
+.nav-item .nav-icon-container {
+    position: relative !important;
+    font-size: 1.25rem !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.25s ease !important;
+    flex-shrink: 0 !important;
+    margin: 0 auto !important;
+}
+
+.nav-item.active {
+    color: var(--bottom-bar-active, var(--theme-bottom-nav-active, var(--theme-bottom-active-color, var(--primary))));
+}
+
+.nav-item.active .nav-icon-container {
+    transform: translateY(-3px);
+}
+
+/* ----------------------------------
+   5. هيدر المتجر المستقل (Isolated Mode)
+------------------------------------- */
+.isolated-header {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed !important;
+    top: var(--store-top-bars-height, 0px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), top 0.3s, background 0.3s, border 0.3s, box-shadow 0.3s !important;
+    background: transparent;
+    border-bottom: transparent;
+    box-shadow: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 200 !important;
+    height: 55px !important;
+    width: 100% !important;
+}
+
+.isolated-header.scrolled {
+    transform: translateY(0) !important;
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--glass-bg))) !important;
+    border-bottom: 1px solid var(--theme-border, var(--border)) !important;
+    box-shadow: var(--shadow-sm) !important;
+    color: var(--theme-navbar-text, var(--navbar-text, var(--theme-text-primary, var(--text-main)))) !important;
+}
+
+.dark-mode .isolated-header.scrolled {
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--theme-card-bg, var(--bg-card)))) !important;
+    border-color: var(--theme-border, var(--border)) !important;
+    color: var(--theme-navbar-text, var(--navbar-text, var(--theme-text-primary, var(--text-main)))) !important;
+}
+
+.isolated-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 15px !important;
+    height: 55px !important;
+    width: 100% !important;
+}
+
+.iso-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex: 1;
+}
+
+.iso-avatar-box {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: var(--primary-gradient);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+.iso-text-box h1 {
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.iso-text-box p {
+    font-size: 0.85rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: 700;
+}
+
+.iso-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.iso-exit-btn, .store-exit-btn-new {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+
+.iso-exit-btn:hover, .store-exit-btn-new:hover {
+    background: var(--danger);
+    color: white;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
+/* شريط الفئات اللاصق للمتجر (Sticky Category Bar) */
+.sticky-category-bar {
+    position: sticky !important;
+    top: calc(var(--theme-topbar-height, 58px) + var(--store-top-bars-height, 0px)) !important;
+    z-index: 95 !important;
+    margin-top: 0 !important;
+    background: var(--theme-navbar-bg, var(--navbar-bg, var(--glass-bg))) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    padding: 10px 15px !important;
+    margin-bottom: 10px !important;
+    border-bottom: 1px solid var(--theme-border, var(--border)) !important;
+    transition: top 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.sticky-category-bar::-webkit-scrollbar {
+    display: none;
+}
+
+body.header-is-scrolled .sticky-category-bar {
+    top: calc(47px + var(--store-top-bars-height, 0px)) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03) !important;
+}
+
+.premium-cat-btn {
+    background: var(--bg-body);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 6px 16px !important;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 0.8rem !important;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.premium-cat-btn:hover {
+    border-color: var(--primary);
+}
+
+.premium-cat-btn.active {
+    background: var(--text-main);
+    color: var(--bg-body);
+    border-color: var(--text-main);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dark-mode .premium-cat-btn.active {
+    box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+/* ----------------------------------
+   6. الهيدر الشفاف (Transparent Header) للصور الكبيرة
+------------------------------------- */
+.transparent-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 10 !important;
+}
+
+/* ----------------------------------
+   7. تعديلات الشاشات الكبيرة (التابلت والكمبيوتر)
+------------------------------------- */
+@media (min-width: 768px) {
+    /* جعل الشريط السفلي يظهر كـ Floating Dock عصري في المنتصف */
+    body.isolated-mode #isolated-bottom-bar {
+        display: flex !important;
+    }
+    body:not(.isolated-mode) #mobile-bar {
+        display: flex !important;
+    }
+    body.isolated-mode #mobile-bar {
+        display: none !important;
+    }
+    body:not(.isolated-mode) #isolated-bottom-bar {
+        display: none !important;
+    }
+
+    .mobile-bar, .isolated-bottom-bar {
+        max-width: min(var(--theme-bottom-bar-desktop-width, 560px), calc(100vw - 32px));
+        width: min(var(--theme-bottom-bar-desktop-width, 560px), calc(100vw - 32px));
+        min-width: min(380px, calc(100vw - 32px));
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        bottom: var(--theme-bottom-bar-desktop-bottom, 22px) !important;
+        height: var(--theme-bottom-bar-desktop-height, var(--theme-bottom-bar-height, 62px)) !important;
+        border-radius: 9999px !important;
+        border: var(--theme-bottom-bar-border-width, 1px) solid var(--border, rgba(255,255,255,0.12)) !important;
+        border-radius: var(--theme-bottom-bar-radius, 9999px) !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22) !important;
+        padding: 4px 12px !important;
+        gap: 6px !important;
+        padding-bottom: env(safe-area-inset-bottom) !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    .mobile-bar .nav-item, .isolated-bottom-bar .nav-item {
+        flex-direction: row !important;
+        padding: 6px 10px !important;
+        border-radius: var(--theme-bottom-item-radius, 9999px);
+        gap: 6px !important;
+        font-size: 0.82rem !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mobile-bar .nav-item .nav-icon-container,
+    .isolated-bottom-bar .nav-item .nav-icon-container {
+        font-size: var(--theme-bottom-icon-size, 1.15rem) !important;
+        width: 24px !important;
+        height: 24px !important;
+        flex-shrink: 0 !important;
+    }
+
+    body[data-bottom-bar-labels="hidden"] .mobile-bar .nav-item > span,
+    body[data-bottom-bar-labels="hidden"] .isolated-bottom-bar .nav-item > span {
+        display: none !important;
+    }
+
+    body[data-bottom-bar-layout="wide"] .mobile-bar,
+    body[data-bottom-bar-layout="wide"] .isolated-bottom-bar {
+        max-width: calc(100vw - 32px);
+        width: min(920px, calc(100vw - 32px));
+    }
+
+    body[data-top-bar-labels="hidden"] .header-container .nav-actions span,
+    body[data-top-bar-labels="hidden"] .header-container .nav-actions .btn-label {
+        display: none !important;
+    }
+
+    body[data-bottom-bar-labels="hidden"] .bottom-nav-container .bottom-nav-item > span {
+        display: none !important;
+    }
+
+    body[data-bottom-bar-layout="compact"] .mobile-bar,
+    body[data-bottom-bar-layout="compact"] .isolated-bottom-bar {
+        min-width: 320px;
+        width: min(440px, calc(100vw - 32px));
+    }
+
+    body[data-bottom-bar-layout="compact"] .mobile-bar .nav-item,
+    body[data-bottom-bar-layout="compact"] .isolated-bottom-bar .nav-item {
+        padding-inline: 6px !important;
+        gap: 4px !important;
+        font-size: 0.76rem !important;
+    }
+
+    .mobile-bar .nav-item:hover,
+    .isolated-bottom-bar .nav-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--theme-bottom-nav-active, var(--primary)) !important;
+        transform: translateY(-2px);
+    }
+
+    .mobile-bar .nav-item.active,
+    .isolated-bottom-bar .nav-item.active {
+        background: var(--theme-bottom-active-bg, rgba(99, 102, 241, 0.12));
+        color: var(--theme-bottom-nav-active, var(--primary)) !important;
+    }
+
+    .mobile-bar .nav-item.active::after,
+    .isolated-bottom-bar .nav-item.active::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        width: 16px;
+        height: 3px;
+        border-radius: 999px;
+        background: currentColor;
+        opacity: 0.9;
+    }
+
+    .mobile-bar .nav-item.active .nav-icon-container,
+    .isolated-bottom-bar .nav-item.active .nav-icon-container {
+        transform: none !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+        .mobile-bar,
+        .isolated-bottom-bar {
+            min-height: 60px;
+            width: min(var(--theme-mobile-bar-width, 100%), 100vw) !important;
+            left: 50% !important;
+            right: auto !important;
+            transform: translateX(-50%) !important;
+            bottom: var(--theme-mobile-bar-bottom, 0px) !important;
+            height: calc(var(--theme-mobile-bar-height, 62px) + env(safe-area-inset-bottom)) !important;
+            padding: 4px 4px env(safe-area-inset-bottom) !important;
+            border-radius: var(--theme-mobile-bar-radius, var(--theme-bottom-bar-radius, 22px)) !important;
+            gap: 2px !important;
+            box-sizing: border-box !important;
+            overflow: visible !important;
+        }
+
+        .mobile-bar .nav-item,
+        .isolated-bottom-bar .nav-item {
+            flex: 1 1 0 !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
+            padding: 4px 1px !important;
+            gap: 2px !important;
+            font-size: 0.7rem !important;
+            border-radius: var(--theme-mobile-item-radius, 12px) !important;
+            box-sizing: border-box !important;
+        }
+
+        .mobile-bar .nav-item .nav-icon-container,
+        .isolated-bottom-bar .nav-item .nav-icon-container {
+            font-size: var(--theme-mobile-icon-size, 1.15rem) !important;
+            width: 26px !important;
+            height: 26px !important;
+            flex-shrink: 0 !important;
+        }
+
+        body[data-mobile-bar-shape="pill"] .mobile-bar,
+        body[data-mobile-bar-shape="pill"] .isolated-bottom-bar {
+            border-radius: 999px !important;
+        }
+
+        body[data-mobile-bar-shape="icons"] .mobile-bar .nav-item > span,
+        body[data-mobile-bar-shape="icons"] .isolated-bottom-bar .nav-item > span {
+            display: none !important;
+        }
+
+        body[data-mobile-bar-shape="icons"] .mobile-bar .nav-item,
+        body[data-mobile-bar-shape="icons"] .isolated-bottom-bar .nav-item {
+            min-width: 42px;
+            width: 42px;
+            height: 42px;
+            justify-content: center;
+            padding: 0;
+        }
+
+        body[data-mobile-bar-shape="elevated"] .mobile-bar .nav-item,
+        body[data-mobile-bar-shape="elevated"] .isolated-bottom-bar .nav-item {
+            background: color-mix(in srgb, var(--theme-bottom-nav-active) 9%, var(--theme-bottom-nav-bg)) !important;
+            box-shadow: 0 5px 14px color-mix(in srgb, var(--theme-text-primary) 12%, transparent);
+        }
+
+    body[data-mobile-bar-shape="center"] .mobile-bar .nav-item.active,
+    body[data-mobile-bar-shape="center"] .isolated-bottom-bar .nav-item.active {
+        transform: translateY(-9px);
+        background: var(--theme-bottom-nav-active) !important;
+        color: #fff !important;
+        box-shadow: 0 8px 18px color-mix(in srgb, var(--theme-bottom-nav-active) 35%, transparent);
+    }
+
+    .mobile-bar .nav-item,
+    .isolated-bottom-bar .nav-item {
+        transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+            background-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .mobile-bar .nav-item:active,
+    .isolated-bottom-bar .nav-item:active {
+        transform: scale(0.94);
+    }
+
+    .mobile-bar .nav-item.active .nav-icon-container,
+    .isolated-bottom-bar .nav-item.active .nav-icon-container {
+        animation: mobileNavIconPop 0.28s ease-out;
+    }
+}
+
+@keyframes mobileNavIconPop {
+0% { transform: scale(0.82); }
+65% { transform: scale(1.12); }
+100% { transform: scale(1); }
+}
+
+@media (max-width: 767px) {
+    body[data-mobile-bar-shape="center"] .mobile-bar .nav-item.active,
+    body[data-mobile-bar-shape="center"] .isolated-bottom-bar .nav-item.active {
+        transform: translateY(-9px);
+    }
+}
+
+/* ضبط المسافة السفلية لمحتوى المتجر بدقة لمنع الهامش الزائد وظهور المنتجات كاملة فوق الشريط */
+#categories-wrapper {
+    padding-bottom: 0 !important;
+}
+
+main#main-content {
+    padding-bottom: calc(var(--bottom-nav-height, 65px) + 20px + env(safe-area-inset-bottom)) !important;
+}
+
+/* ========================================================
+   إخفاء أشرطة الإعلانات خارج الصفحة الرئيسية
+   (الأقسام، تفاصيل المنتج، السلة، البحث، الملف، المفضلة)
+   ======================================================== */
+body.category-view-active #storefront-announcement-bar,
+body.category-view-active #storefront-shipping-bar,
+body.has-subpage-open #storefront-announcement-bar,
+body.has-subpage-open #storefront-shipping-bar,
+body:has(.page-overlay.open) #storefront-announcement-bar,
+body:has(.page-overlay.open) #storefront-shipping-bar,
+body:has(#product-detail-page.open) #storefront-announcement-bar,
+body:has(#product-detail-page.open) #storefront-shipping-bar,
+body:has(#category-full-view-root) #storefront-announcement-bar,
+body:has(#category-full-view-root) #storefront-shipping-bar {
+    display: none !important;
+}
+
+body.category-view-active .header-container,
+body.has-subpage-open .header-container,
+body:has(.page-overlay.open) .header-container,
+body:has(#product-detail-page.open) .header-container,
+body:has(#category-full-view-root) .header-container {
+    top: 0 !important;
+}
+
+body.category-view-active,
+body.has-subpage-open,
+body:has(.page-overlay.open),
+body:has(#product-detail-page.open),
+body:has(#category-full-view-root) {
+    padding-top: calc(var(--theme-topbar-height, 58px) + var(--sub-nav-height, 46px) + 10px) !important;
+}
+
+/* ضبط المسافات في صفحة الأقسام لضمان ظهور أول صف وآخر صف من المنتجات بوضوح تام دون حجب */
+.category-full-page,
+#category-full-view-root {
+    padding-top: 10px !important;
+    padding-bottom: calc(var(--bottom-nav-height, 65px) + 75px + env(safe-area-inset-bottom)) !important;
+    box-sizing: border-box !important;
+}
+
+#category-page-grid {
+    padding-bottom: calc(var(--bottom-nav-height, 65px) + 75px + env(safe-area-inset-bottom)) !important;
+    box-sizing: border-box !important;
+}
